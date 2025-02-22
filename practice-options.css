@@ -1,0 +1,103 @@
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #a8f7f5;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    color: black;
+    padding: 14px 16px;
+    display: block;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 30px;
+  }
+  
+  li a:hover {
+    background-color: orange;
+    transition-duration: 0.2s;
+    box-shadow: 0.1vw 0.1vw;
+    text-shadow: 0.05vw 0.05vw;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: lightblue;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 40px;
+    border: solid black 1px;
+    box-shadow: 3px 3px pink;
+  }
+  
+  .options {
+    padding: 20px;
+    display: inline-block;
+    font-family: Tahoma;
+    background-color: lightblue;
+    border-radius: 15px;
+    box-shadow: 5px 5px orange;
+    border: solid black 1px;
+    margin: 0 30px;
+    min-width: 250px;
+  }
+  
+  .moods {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .phone-moods {
+    text-align: center;
+  }
+  
+  .phone-options {
+    font-family: Tahoma;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .moods a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 0 10px;
+    border-radius: 20px;
+    font-family: monospace;
+    font-size: 15px;
+  }
+  
+  /* Media query to change layout on smaller screens */
+  @media screen and (max-width: 900px) {
+    .moods {
+      flex-direction: column;
+      align-items: center; /* Center the boxes in the column layout */
+    }
+  
+    .options {
+      width: 60%;/* Make the boxes wider to fit the screen */
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }

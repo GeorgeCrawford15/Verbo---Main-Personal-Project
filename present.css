@@ -1,0 +1,242 @@
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #f5d25f;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #a8f7f5;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    color: black;
+    padding: 14px 16px;
+    display: block;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 30px;
+  }
+  
+  li a:hover {
+    background-color: orange;
+    transition-duration: 0.2s;
+    box-shadow: 0.1vw 0.1vw;
+    text-shadow: 0.05vw 0.05vw;
+  }
+  
+  /*.verbs ul {
+    list-style-type: none;
+    padding: 2px;
+  }
+  
+  .verbs {
+    /*position: absolute;*/
+  /*transform: translate(0, -50%);*/
+  /*top: 500px;*/
+  /*background-color: lightskyblue;
+    padding: 0;
+    /*left: 30%;*/
+  /* border-radius: 5px;
+    font-family: monospace;
+    width: 100px;
+  }
+  
+  .verbs li {
+    padding: 10px 5px;
+    background-color: #f6f7d7;
+    margin: 40px 5px;
+    font-size: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .pronouns ul {
+    list-style-type: none;
+  }
+  
+  .pronouns {
+    background-color: lightskyblue;
+    font-family: monospace;
+    border-radius: 5px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .pronouns li {
+    display: inline-block;
+    padding: 10px 5px;
+    font-size: 15px;
+    background-color: #f6f7d7;
+    margin: 5px 30px;
+    border-radius: 8px;
+  }
+  
+  .chart {
+    background-color: red;
+  }*/
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    padding: 5px;
+    font-family: monospace;
+  }
+  
+  .grid-item {
+    background-color: #b9d2fa;
+    border: 0.5px solid black;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  input {
+    font-family: sans-serif;
+    border-radius: 3px;
+    border: 3px white solid;
+    outline: none;
+    height: 25px;
+    font-size: 20px;
+    max-width: 100px;
+  }
+  
+  .title h1 {
+    font-family: sans-serif;
+    margin-left: 30px;
+  }
+  
+  .title p {
+    font-family: monospace;
+    margin-left: 30px;
+  }
+  
+  .title-timer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .timer-button {
+    font-family: monospace;
+    padding: 2px;
+    box-shadow: 2px 2px;
+  }
+  
+  .timer {
+    text-align: center;
+    font-family: sans-serif;
+    margin-right: 40px;
+  }
+  
+  #stopwatch {
+    margin-bottom: 10px;
+  }
+  
+  .accent-adder {
+    border: solid 2px black;
+    width: 150px;
+    text-align: center;
+    margin-left: 10px;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  
+  .accent-adder p {
+    margin: 0;
+  }
+  
+  #suggestion {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  
+  #accent-button {
+    margin-bottom: 10px;
+    width: 90px;
+    height: 90px;
+    font-size: 70px;
+    border: 2px black solid;
+  }
+  
+  #accent-button:hover {
+    background-color: gray;
+    color: white;
+  }
+  
+  .present-conjugation-chart {
+    display: none;
+  }
+  
+  .confirm-conjugating {
+    border: 1px solid black;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #84eaf5;
+    margin-top: 150px;
+    border-radius: 30px;
+  }
+  
+  .confirm-conjugating input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;
+  }
+  
+  .confirm-conjugating h2 {
+    margin-bottom: 5px;
+    font-family: sans-serif;
+  }
+  
+  .confirm-conjugating p {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-family: sans-serif;
+  }
+  
+  .confirm-conjugating button {
+    margin-bottom: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 40px;
+    font-family: monospace;
+    border-radius: 20px;
+    border: solid black 2px;
+  }
+  
+  .confirm-conjugating button:hover {
+    background-color: #cff2bb;
+  }
+  
+  .confirm-conjugating label {
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+  
+  .confirm-conjugating h1 {
+    font-family: monospace;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .vosotros .vosotros-input1 .vosotros-input2 .vosotros-input3 {
+    display: none;
+  }

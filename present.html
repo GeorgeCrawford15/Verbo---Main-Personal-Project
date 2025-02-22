@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Present</title>
+    <link rel="stylesheet" href="present.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <!--<div class="chart">
+     <div class="pronouns">
+        <ul>
+          <li>Yo</li>
+          <li>Tù</li>
+          <li>Él/Ella/Ud.</li>
+          <li>Nosotros/Nosotras</li>
+          <li>Vosotros/Vosotras</li>
+          <li>Ellos/Ellas/Uds.</li>
+        </ul>
+      </div>
+    <div class="verbs">
+    <ul>
+      <li>Sacar</li>
+      <li>Seguir</li>
+      <li>Beber</li>
+    </ul>
+  </div>
+  </div> -->
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+    <div class="confirm-conjugating">
+      <h1>Present Tense Conjugation Chart</h1>
+      <h2>Settings</h2>
+      <label for="include-vosotros">Include vosotros/as conjugations?</label>
+      <input type="checkbox" id="include-vosotros">
+      <p>Try to conjugate them as fast as you can!</p>
+      <button class="start-button">START</button>
+    </div>
+    <div class="present-conjugation-chart">
+    <div class="title-timer">
+      <div class="title">
+      <h1>Present Tense Conjugation Chart</h1>
+      <p>How fast can you conjugate them?</p>
+      </div>
+      <div class="timer">
+      <h1 id="stopwatch">00:00</h1>
+      <button class="timer-button">Reset</button>
+      <script src="stopwatch.js"></script>
+      </div>
+    </div>
+      <div class="overall-grid-container">
+    <div class="grid-container">
+      <div class="grid-item"></div>
+      <div class="grid-item">Yo</div>
+      <div class="grid-item">Tú</div>
+      <div class="grid-item">Él/Ella/Ud.</div>
+      <div class="grid-item">Nosotros/as</div>
+      <div class="grid-item vosotros">Vosotros/as</div>
+      <div class="grid-item">Ellos/as/Uds.</div>
+      <div class="grid-item">Sacar</div>
+      <div class="grid-item"><input id="yo1-input"></div>
+      <div class="grid-item"><input id="tu1-input"></div>
+      <div class="grid-item"><input id="el1-input"></div>
+      <div class="grid-item"><input id="nos1-input"></div>
+      <div class="grid-item vosotros-input1"><input id="vos1-input"></div>
+      <div class="grid-item"><input id="ellos1-input"></div>
+      <div class="grid-item">Comer</div>
+      <div class="grid-item"><input></div>
+      <div class="grid-item"><input></div>
+      <div class="grid-item"><input></div>
+      <div class="grid-item"><input></div>
+      <div class="grid-item vosotros-input2"><input></div>
+      <div class="grid-item"><input></div>
+      <div class="grid-item">Seguir</div>
+      <div class="grid-item"><input></div>
+      <div class="grid-item"><input></div>
+      <div class="grid-item"><input></div>
+      <div class="grid-item"><input></div>
+      <div class="grid-item vosotros-input3"><input></div>
+      <div class="grid-item"><input></div>
+    </div>
+      </div>
+    <div class="accent-adder">
+      <p>Add Accent</p>
+      <p id="suggestion">(or press "enter")</p>
+      <button id="accent-button"></button>
+    </div>
+  </div>
+  <script src="present.js"></script>
+  </body>
+</html>
