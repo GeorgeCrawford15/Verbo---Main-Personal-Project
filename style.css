@@ -50,13 +50,14 @@ body {
   }
   
   .ai-photo {
-    background-image: url("https://arizent.brightspotcdn.com/65/a4/b46e793a4292bc488cecd426fbaa/artificial-intelligence-speaking.jpeg");
+    /*background-image: url("https://arizent.brightspotcdn.com/65/a4/b46e793a4292bc488cecd426fbaa/artificial-intelligence-speaking.jpeg");*/
+    background-image: url("https://bhsec.bard.edu/manhattan/wp-content/uploads/sites/21/2021/02/Bkg-1.png");
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
