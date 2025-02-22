@@ -103,6 +103,8 @@ conjugationInputs.forEach(function(input) {
   });
 });
 
+
+
 /*document.getElementById('yo1-input').addEventListener('input', function() {
   if (this.value.toLowerCase() === firstVerbKey[0]) {
     this.style.color = 'green';
