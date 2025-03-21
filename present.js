@@ -103,78 +103,94 @@ conjugationInputs.forEach(function(input) {
   });
 });
 
+const conjugationKey = {
+  'sacar': [
+    'saco',
+    'sacas',
+    'saca',
+    'sacamos',
+    'sacáis',
+    'sacan'
+  ],
+  'comer': [
+    'como',
+    'comes',
+    'come',
+    'comemos',
+    'coméis',
+    'comen'
+  ],
+  'seguir': [
+    'sigo',
+    'sigues',
+    'sigue',
+    'seguimos',
+    'seguís',
+    'siguen'
+  ]
+};
 
-
-/*document.getElementById('yo1-input').addEventListener('input', function() {
-  if (this.value.toLowerCase() === firstVerbKey[0]) {
-    this.style.color = 'green';
-  } else {
-    this.style.color = 'black';
-  }
-});
-
-document.getElementById('tu1-input').addEventListener('input', function() {
-  if (this.value.toLowerCase() === firstVerbKey[1]) {
-    this.style.color = 'green';
-  } else {
-    this.style.color = 'black';
-  }
-});
-
-document.getElementById('el1-input').addEventListener('input', function() {
-  if (this.value.toLowerCase() === firstVerbKey[2]) {
-    this.style.color = 'green';
-  } else {
-    this.style.color = 'black';
-  }
-});
-
-document.getElementById('nos1-input').addEventListener('input', function() {
-  if (this.value.toLowerCase() === firstVerbKey[3]) {
-    this.style.color = 'green';
-  } else {
-    this.style.color = 'black';
-  }
-});
-
-document.getElementById('vos1-input').addEventListener('input', function() {
-  if (this.value.toLowerCase() === firstVerbKey[4]) {
-    this.style.color = 'green';
-  } else {
-    this.style.color = 'black';
-  }
-});
-
-document.getElementById('ellos1-input').addEventListener('input', function() {
-  if (this.value.toLowerCase() === firstVerbKey[5]) {
-    this.style.color = 'green';
-  } else {
-    this.style.color = 'black';
-  }
-});*/
-
-const firstVerbKey = [
-  'saco',
-  'sacas',
-  'saca',
-  'sacamos',
-  'sacáis',
-  'sacan'
-]
-
-const inputs = [
-  { id: 'yo1-input', key: firstVerbKey[0] },
-  { id: 'tu1-input', key: firstVerbKey[1] },
-  { id: 'el1-input', key: firstVerbKey[2] },
-  { id: 'nos1-input', key: firstVerbKey[3] },
-  { id: 'vos1-input', key: firstVerbKey[4] },
-  { id: 'ellos1-input', key: firstVerbKey[5] }
+const inputsKey = [
+  { id: 'yo1-input', key: conjugationKey.sacar[0] },
+  { id: 'tu1-input', key: conjugationKey.sacar[1] },
+  { id: 'el1-input', key: conjugationKey.sacar[2] },
+  { id: 'nos1-input', key: conjugationKey.sacar[3] },
+  { id: 'vos1-input', key: conjugationKey.sacar[4] },
+  { id: 'ellos1-input', key: conjugationKey.sacar[5] },
+  { id: 'yo2-input', key: conjugationKey.comer[0] },
+  { id: 'tu2-input', key: conjugationKey.comer[1] },
+  { id: 'el2-input', key: conjugationKey.comer[2] },
+  { id: 'nos2-input', key: conjugationKey.comer[3] },
+  { id: 'vos2-input', key: conjugationKey.comer[4] },
+  { id: 'ellos2-input', key: conjugationKey.comer[5] },
+  { id: 'yo3-input', key: conjugationKey.seguir[0] },
+  { id: 'tu3-input', key: conjugationKey.seguir[1] },
+  { id: 'el3-input', key: conjugationKey.seguir[2] },
+  { id: 'nos3-input', key: conjugationKey.seguir[3] },
+  { id: 'vos3-input', key: conjugationKey.seguir[4] },
+  { id: 'ellos3-input', key: conjugationKey.seguir[5] }
 ];
 
-inputs.forEach(input => {
-  document.getElementById(input.id).addEventListener('input', function() {
-    this.style.color = this.value.toLowerCase() === input.key ? 'green' : 'red';
+inputsKey.forEach(inputKey => {
+  document.getElementById(inputKey.id).addEventListener('input', function() {
+    this.style.color = this.value.toLowerCase() === inputKey.key ? 'green' : 'red';
   });
 });
 
 
+// Fix this evaluation algorithm. It should check all inputs, and should ultimately not rely on the use of a button. 
+// Rather, it should check all inputs when the user has finished typing.
+// The function should be called every time the user types a character in an input field.
+// The function may either evaluate the inputs based on the color of the input fields, or it may check the values of the input fields directly.
+// I need to choose which one works best.
+// When the user has typed all the correct answers, the algorithm should move to a new page that displays their time and accuracy.
+function areAllInputsCorrect() {
+  let allCorrect = true;
+
+  inputsKey.forEach(input => {
+    const element = document.getElementById(input.id);
+    if (element.value.toLowerCase() !== input.key) {
+      allCorrect = false;
+    }
+  });
+
+  return allCorrect;
+}
+
+function areAllInputsCorrect() {
+  return inputsKey.every(input => {
+    const element = document.getElementById(input.id);
+    return element.value.toLowerCase() === input.key;
+  });
+}
+
+function runIfAllInputsCorrect() {
+  if (areAllInputsCorrect()) {
+    console.log('All inputs are correct!');
+    // Example: alert('All inputs are correct!');
+  } else {
+    console.log('Not all inputs are correct.');
+  }
+}
+
+document.querySelector('#check-button').addEventListener('click', runIfInputCorrect);
